@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>iUI Music Demo</title>
+<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<style type="text/css" media="screen">@import "/iui/iui/iui.css";</style>
+<script type="application/x-javascript" src="/iui/iui/iui.js"></script>
+<!--
+<script type="application/x-javascript" src="http://10.0.1.2:1840/ibug.js"></script>
+-->
+</head>
+
+<body onclick="console.log('Hello', event.target);">
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+    </div>
+    
+    <ul id="home" title="Sandy, please" selected="true">
+        <li class="group">remind me...</li>
+        <li><a href="#what">this afternoon</a></li>
+        <li><a href="#what">this evening</a></li>
+        <li><a href="#when">tomorrow</a></li>
+        <li><a href="#dow">[DAY OF WEEK]</a></li>
+        <li><a href="#dow">[DATE]</a></li>
+    </ul>
+    <ul id="dow">
+        <li class="group">remind me...</li>
+        <li><a href="#when">Monday</a></li>
+        <li><a href="#when">Tuesday</a></li>
+        <li><a href="#when">Wednesday</a></li>
+        <li><a href="#when">Thursday</a></li>
+        <li><a href="#when">Friday</a></li>
+        <li><a href="#when">Saturday</a></li>
+        <li><a href="#when">Sunday</a></li>
+    </ul>
+    <ul id="when">
+        <li class="group">remind me tomorrow...</li>
+        <li><a href="#what">morning</a></li>
+        <li><a href="#what">afternoon</a></li>
+        <li><a href="#what">evening</a></li>
+        <li><a href="#time">[SPECIFIC TIME]</a></li>
+    </ul>
+    <ul id="what">
+        <li class="group">remind me tomorrow morning...</li>
+        <li><a href="#pickup">to pick up</a></li>
+        <li><a href="#call">to call</a></li>
+        <li><a href="#call">[TEXT]</a></li>
+    </ul>
+    <ul id="call">
+        <li class="group">remind me tomorrow morning to call...</li>
+        <li><a href="#done">Cathy</a></li>
+        <li><a href="#done">Steve</a></li>
+        <li><a href="#done">Dave</a></li>
+        <li><a href="#done">Dan</a></li>
+        <li><a href="#done">[WHO]</a></li>
+    </ul>
+    <ul id="done">
+        <h1>DONE</h1>
+        <li><a href="/sandy">Start Over</a></li>
+    </ul>
+    <ul id="JennyLewis" title="Jenny Lewis">
+        <li><a href="#songs">White Rabbit Fur Coat</a></li>
+    </ul>
+    <ul id="JohnMayer" title="John Mayer">
+        <li><a href="#songs">Continuum</a></li>
+        <li><a href="#songs">Heavier Things</a></li>
+        <li><a href="#songs">Room for Squares</a></li>
+    </ul>
+    <ul id="Zero7" title="Zero 7">
+        <li><a href="#songs">The Garden</a></li>
+        <li><a href="#songs">Simple Things</a></li>
+        <li><a href="#songs">When it Falls</a></li>
+    </ul>
+    <ul id="songs" title="Songs">
+        <li><a href="#player">Song 1</a></li>
+        <li><a href="#player">Song 2</a></li>
+        <li><a href="#player">Song 3</a></li>
+        <li><a href="#player">Song 4</a></li>
+        <li><a href="#player">Song 5</a></li>
+        <li><a href="#player">Song 6</a></li>
+        <li><a href="#player">Song 7</a></li>
+        <li><a href="#player">Song 8</a></li>
+        <li><a href="#player">Song 9</a></li>
+        <li><a href="#player">Song 10</a></li>
+        <li><a href="#player">Song 11</a></li>
+    </ul>
+    
+    <div id="player" class="panel" title="Now Playing">
+        <h2>If this weren't just a demo, you might be hearing a song...</h2>
+    </div>
+    
+    <form id="searchForm" class="dialog" action="search.php">
+        <fieldset>
+            <h1>Music Search</h1>
+            <a class="button leftButton" type="cancel">Cancel</a>
+            <a class="button blueButton" type="submit">Search</a>
+            
+            <label>Artist:</label>
+            <input id="artist" type="text" name="artist"/>
+            <label>Song:</label>
+            <input type="text" name="song"/>
+        </fieldset>
+    </form>
+
+    <div id="settings" title="Settings" class="panel">
+        <h2>Playback</h2>
+        <fieldset>
+            <div class="row">
+                <label>Repeat</label>
+                <div class="toggle" onclick=""><span class="thumb"></span><span class="toggleOn">ON</span><span class="toggleOff">OFF</span></div>
+            </div>
+            <div class="row">
+                <label>Shuffle</label>
+                <div class="toggle" onclick="" toggled="true"><span class="thumb"></span><span class="toggleOn">ON</span><span class="toggleOff">OFF</span></div>
+            </div>
+        </fieldset>
+        
+        <h2>User</h2>
+        <fieldset>
+            <div class="row">
+                <label>Name</label>
+                <input type="text" name="userName" value="johnappleseed"/>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <input type="password" name="password" value="delicious"/>
+            </div>
+            <div class="row">
+                <label>Confirm</label>
+                <input type="password" name="password" value="delicious"/>
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>
